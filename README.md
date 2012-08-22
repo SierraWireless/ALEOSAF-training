@@ -32,7 +32,7 @@ Each lab includes:
 They are meant to be done in the folowing order:
 
 1. [Setup] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/Setup).
-2. [Getting Staryed] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/GettingStarted).
+2. [Getting Started] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/GettingStarted).
 3. [Lua Functions] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/LuaFunctions).
 4. [Lua Tables] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/LuaTables).
 5. [Lua Modules] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/LuaModules).
