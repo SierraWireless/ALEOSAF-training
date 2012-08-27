@@ -2,6 +2,7 @@ local sched = require 'sched'
 
 -- Step.1
 -- Create a local function that just print "hello".
+-- Call the created function from the main and run it to test
 local function printhello ()
 	print ('hello')
 end
@@ -22,6 +23,8 @@ end
 
 -- Step.6
 -- Create a function that perform an euclidian divide and return two params the result and the rest
+-- To compute the result, use math.floor(number) that return the interger of a number
+-- To compute the rest, use the % operator to perform modulo
 -- Call this function in the main and print both returned values
 local function divide6(arg1, arg2)
 	local result = math.floor(arg1/arg2)
@@ -31,7 +34,8 @@ end
 
 -- Step.7
 -- Same function but handle the divide by zero error by returning a nil values followed by an error message
---- Call this function in the main and handle the error case result
+-- If there are no error, just return the result as usual
+-- Call this function in the main and handle the error case result by using "assert" function
 local function divide7(arg1, arg2)
 	if (arg2 == 0) then
 		return nil, "Divide by zero is forbidden"
@@ -44,35 +48,31 @@ end
 
 local function main ()
 
-	-- Step.1
+	-- Put call to local function define above here
 	-- Call the print hello function
 	printhello()
 	
-	-- Step.3
 	-- Call the divide function
 	divide3(11,2)
 	
-	-- Step.4
 	-- Handle a function that return a value
 	local result4 = divide4(11, 2)
 	print ("result:"..result4)
 	
-	-- Step.6
 	-- Handle multiple values on function return
 	local result6, rest6 = divide6(11,2)
 	print ("result:"..result6..",rest:"..rest6)
 	
-	-- Step.7
-	-- Use assert to handle an error message
 	-- A successful divide
 	local result7, rest7 = assert(divide7(11,2))
 	print ("result:"..result7..",rest:"..rest7)
+	
 	-- A failling divide
-	result7, rest7 = assert(divide7(11,0))
+--	result7, rest7 = assert(divide7(11,0))
 	print ("result:"..result7..",rest:"..rest7)
 
 	-- Step.9
-	-- Put the divide function in a local variable
+	-- Affect a divide function in a local variable
 	local divide9 = function (arg1, arg2)
 		if (arg2 == 0) then
 			return nil, "Divide by zero is forbidden"
@@ -87,10 +87,10 @@ local function main ()
 
 	-- Step.10
 	-- Create two functions: 
-	-- The first one will take two numbers and one callback function as parameters 
-	-- and will divide the numbers and call the callback function with the result and return nothing
-	-- The second one will take a result as parameter and print it.
-	-- Call the divide function with the callback function as parameter  
+	-- The first one will take a parameter as parameter and print it.
+	-- The second one will take two numbers and the first callback function as parameters 
+	-- and will divide the numbers and call the callback function with the result
+	-- And the end, call the divide function with the callback function as parameter
 	
 	-- Callback function
 	local handleresultfn =  function (result, rest)
@@ -110,6 +110,7 @@ local function main ()
 	divide2fn(11,2,handleresultfn)
 	
 	-- The end
+	print("end")
 	os.exit()
 end
 

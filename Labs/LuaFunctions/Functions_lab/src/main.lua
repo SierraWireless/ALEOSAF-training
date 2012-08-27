@@ -2,6 +2,7 @@ local sched = require 'sched'
 
 -- Step.1
 -- Create a local function that just print "hello".
+-- Call the created function from the main and run it to test
 
 
 -- Step.3
@@ -16,12 +17,15 @@ local sched = require 'sched'
 
 -- Step.6
 -- Create a function that perform an euclidian divide and return two params the result and the rest
+-- To compute the result, use math.floor(number) that return the interger of a number
+-- To compute the rest, use the % operator to perform modulo
 -- Call this function in the main and print both returned values
 
 
 -- Step.7
 -- Same function but handle the divide by zero error by returning a nil values followed by an error message
---- Call this function in the main and handle the error case result
+-- If there are no error, just return the result as usual
+-- Call this function in the main and handle the error case result by using "assert" function
 
 
 local function main ()
@@ -30,19 +34,19 @@ local function main ()
 
 
 	-- Step.9
-	-- Put the divide function in a local variable
-	-- Add call the function from the variable
+	-- Affect a divide function in a local variable
 
 
 	-- Step.10
 	-- Create two functions: 
-	-- The first one will take two numbers and one callback function as parameters 
-	-- and will divide the numbers and call the callback function with the result and return nothing
-	-- The second one will take a result as parameter and print it.
-	-- Call the divide function with the callback function as parameter  
+	-- The first one will take a parameter as parameter and print it.
+	-- The second one will take two numbers and the first callback function as parameters 
+	-- and will divide the numbers and call the callback function with the result
+	-- And the end, call the divide function with the callback function as parameter
 	
 	
 	-- The end
+	print("end")
 	os.exit()
 end
 
