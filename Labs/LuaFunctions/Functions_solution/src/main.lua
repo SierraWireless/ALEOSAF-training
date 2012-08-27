@@ -7,21 +7,21 @@ local function printhello ()
 	print ('hello')
 end
 
--- Step.3
+-- Step.2
 -- Create a local function that takes two numbers arguments and 
 -- print the result of the first arguement divided by the second one
 local function divide3(arg1, arg2)
 	print ("result:"..arg1/arg2)
 end
 
--- Step.4
+-- Step.3
 -- Same function that divide two numbers but just return the result instead of print it
 -- Call the function and print the result in the main.
 local function divide4(arg1, arg2)
 	return arg1/arg2
 end
 
--- Step.6
+-- Step.4
 -- Create a function that perform an euclidian divide and return two params the result and the rest
 -- To compute the result, use math.floor(number) that return the interger of a number
 -- To compute the rest, use the % operator to perform modulo
@@ -32,7 +32,7 @@ local function divide6(arg1, arg2)
 	return result, rest
 end
 
--- Step.7
+-- Step.6
 -- Same function but handle the divide by zero error by returning a nil values followed by an error message
 -- If there are no error, just return the result as usual
 -- Call this function in the main and handle the error case result by using "assert" function
@@ -68,10 +68,10 @@ local function main ()
 	print ("result:"..result7..",rest:"..rest7)
 	
 	-- A failling divide
---	result7, rest7 = assert(divide7(11,0))
+	-- result7, rest7 = assert(divide7(11,0))
 	print ("result:"..result7..",rest:"..rest7)
 
-	-- Step.9
+	-- Step.7
 	-- Affect a divide function in a local variable
 	local divide9 = function (arg1, arg2)
 		if (arg2 == 0) then
@@ -85,7 +85,7 @@ local function main ()
 	local result9, rest9 = assert(divide9(11,2))
 	print ("result:"..result9..",rest:"..rest9)
 
-	-- Step.10
+	-- Step.8
 	-- Create two functions: 
 	-- The first one will take a parameter as parameter and print it.
 	-- The second one will take two numbers and the first callback function as parameters 
