@@ -1,7 +1,7 @@
 Setup Lab
 ===============================================================================
 
-Setup the gateway in order to folow the training.
+Setup the gateway in order to follow the training.
 
 Goals
 -------------------------------------------------------------------------------
