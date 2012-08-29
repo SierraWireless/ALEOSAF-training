@@ -1,11 +1,13 @@
 Setup Lab
 ===============================================================================
 
+Setup the gateway in order to folow the training.
+
 Goals
 -------------------------------------------------------------------------------
 
 1. Setup the device in order to be used for the development.
-2. Leverage Sierra Developer Zone to get resources and support.
+2. Leverage Sierra Wireless Developer Zone to get resources and support.
 
 Notions
 -------------------------------------------------------------------------------
@@ -42,10 +44,10 @@ Prerequisites
 -------------------------------------------------------------------------------
 
 * An account on the Sierra Wireless [Developer Zone] (https://www.sierrawireless.com/Register.aspx).
-* Order the [ALEOS AF Developer Kit] (http://developer.sierrawireless.com/en/Resources/Resources/Kits/ALEOS%20AF%20DevKit.aspx).
+* Order the [ALEOS AF Developer Kit and a GXxx] (http://developer.sierrawireless.com/en/Resources/Resources/Kits/ALEOS%20AF%20DevKit.aspx).
 * Have a subscription to a network provider.
 
-Steps
+Instructions
 -------------------------------------------------------------------------------
 
 Folow the instruction from the [Setting Up Hardware tutorial] (http://developer.sierrawireless.com/en/Resources/Resources/Educational_Documentation/Tutorial_AAF_Setting_Up_Hardware.aspx)
