@@ -10,9 +10,7 @@ local function main ()
 	-- Use the string module to create a string using format
 	-- After print it, set the string to upper case
 	-- Press ctrl+space to have content assist
-	local example = string.format("arg1:%s, numberarg:%d", "ARG1", 1234)
-	print(example)
-	print(string.upper(example))
+
 
 	-- Step.4
 	-- Using the given funtions create an array with all addressbook related functions
@@ -61,28 +59,24 @@ local function main ()
 	end
 
 	-- Create a table of function
-	local addressbookfunctions = {find=find, add=add, remove=remove, print=printaddressbook}
+	local addressbookfunctions
 	
 	-- Create a new addressbook
 	local addressbook4 = {}
 
 	-- Call functions from the table
-	addressbookfunctions.add(addressbook4, "John", "Smith", "NoWhere Inc", {"095487315"})
-	addressbookfunctions.add(addressbook4, "Jack", "Captain", nil, {"0447981657"})
-	addressbookfunctions.print(addressbook4)
+	
 
 	-- Step.5
 	-- Create a new file called "addressbook.lua". Inside of it, create a new module using luadoc with all the addressbook relative functions.
-	-- The addressbook table itself, that contains entries, can be included in the module or pass as parameter to module functions
+	-- The addressbook table itself, that contains entries, can be included in the module or passed as parameter to module functions
 	-- When the module is created, require it and call some function to add/remove/find and print some entries.
 	
 	-- Require our addressbook module
 	local addressbook5 = require 'addressbook'
 
 	-- Use the module
-	addressbook5.add("John", "Smith", "NoWhere Inc", {"095487315"})
-	addressbook5.add("Jack", "Captain", nil, {"0447981657"})
-	addressbook5.print()
+	
 
 	os.exit()
 end
