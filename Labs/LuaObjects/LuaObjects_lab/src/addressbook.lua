@@ -11,33 +11,13 @@ local M = {}
 -- Step.1
 -- Use Luadoc to declare a new type "instance"
 
---- @type [parent=#addressbook] instance
-
--- Step.2 
+-- Step.2
 -- Create a constructor of addressbook.
 -- Comment the new function using luadoc, the constructor will return a table of type "instance"
 -- This constructor have to add a field initialized by an empty table to created 
 -- instance which will contain addressbook entries
-
----
--- @function [parent=#addressbook] new
--- @param self
--- @return #instance
---
 function M.new(self)
 
-	-- Create a table representing the new addrebook instance
-	local newaddressbook = {}
-	
-	-- Create a new empty table to store instance datas
-	newaddressbook.table = {}
-	
-	-- Set addressbook functions accesible form the the instance
-	setmetatable(newaddressbook, self)
-	self.__index = self
-	
-	-- return the new table
-	return newaddressbook
 end
 
 -- Step.3
@@ -46,43 +26,40 @@ end
 -- The table of data is now located in the self variable (see constructor)
 -- Comment each functions using luadoc, the parent type of function have to be "instance" 
 
----
--- @function [parent=#instance] add
--- @param self
+--- 
+-- @function [parent=#addressbook] add
 -- @param lastname
 -- @param firstname
 -- @param company Can be nil
 -- @param numbers
 --
-function M.add (self, lastname, firstname, company, numbers)
+function M.add (lastname, firstname, company, numbers)
 	local info = {}
 	info.lastname = lastname
 	info.firstname = firstname
 	info.company = company
 
-	self.table[info] = numbers
+	addressbook[info] = numbers
 end
 
----
--- @function [parent=#instance] remove
--- @param self
+--- 
+-- @function [parent=#addressbook] remove
 -- @param lastname
 --
-function M.remove (self, lastname)
-	for info,numbers in pairs(self.table) do
+function M.remove (lastname)
+	for info,numbers in pairs(addressbook) do
 		if (info.lastname == lastname) then
-			self.table[info] = nil;
+			addressbook[info] = nil;
 		end
 	end
 end
 
----
--- @function [parent=#instance] find
--- @param self
+--- 
+-- @function [parent=#addressbook] find
 -- @param lastname
 --
-function M.find (self, lastname)
-	for info,numbers in pairs(self.table) do
+function M.find (lastname)
+	for info,numbers in pairs(addressbook) do
 		if (info.lastname == lastname) then
 			return numbers[1]
 		end
@@ -90,13 +67,12 @@ function M.find (self, lastname)
 	return nil, "Nobody found for the name:".. lastname
 end
 
----
--- @function [parent=#instance] print
--- @param self
+--- 
+-- @function [parent=#addressbook] print
 --
-function M.print(self)
+function M.print ()
 	print ("addressbook:")
-	for info,numbers in pairs(self.table) do
+	for info,numbers in pairs(addressbook) do
 		local linetoprint = info.lastname.." "..info["firstname"]
 
 		linetoprint = linetoprint .. " (".. (info.company or "no company")..")"
