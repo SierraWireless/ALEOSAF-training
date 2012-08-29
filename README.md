@@ -36,7 +36,7 @@ Each lab includes:
 * A mock project that need to be imported in the IDE. This project contains 
   Lua files that will be completed during the exercises
 * A solution project that can be imported in the IDE in order to be compared
-  to the completed mock project. 
+  to the completed mock project.
 
 Plan
 -------------------------------------------------------------------------------
