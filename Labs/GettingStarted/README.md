@@ -38,7 +38,7 @@ In order to use the labs of this training you may want to use git and
 epecially the [EGit plugin] (http://www.eclipse.org/egit/) for Eclipse.
 
 Eclipse also provide a mean to share source code repositories configuration
-called Team Project Set. If you are not familiar with *Team Project Set .psf*  
+called Team Project Set. If you are not familiar with *Team Project Set .psf* 
 files, please refer to the [this documentation](http://wiki.eclipse.org/Project_Set_File).
 
 
@@ -58,5 +58,6 @@ Instructions
    are available on [EGit website](http://www.eclipse.org/egit/download/).
    If you are not familiar with Eclipse based products, have a look at the 
    [installation from update site manual](http://help.eclipse.org/juno/index.jsp?topic=/org.eclipse.platform.doc.user/tasks/tasks-127.htm).
-4. Import  a *Team Project Set* and samples are directly fetched from Github to your workspace. Here is the URL to import:
-   * `http://sierrawireless.github.com/ALEOSAF-samples/resources/aleosafworkingset.psf`
+4. Import  a *Team Project Set* and samples are directly fetched from Github 
+   to your workspace. Here is the URL to import: 
+   `http://sierrawireless.github.com/ALEOSAF-training/resources/xxx.psf`
