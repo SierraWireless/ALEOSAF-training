@@ -47,16 +47,15 @@ The labs are meant to be done in the folowing order:
    1. [Setup] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/Setup).
    2. [Getting Started] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/GettingStarted).
 2. Lua
-
+   3. [Lua Basics] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/LuaBasics).
+   4. [Lua Functions] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/LuaFunctions).
+   5. [Lua Tables] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/LuaTables).
+   6. [Lua Modules] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/LuaModules).
+   7. [Lua Objects] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/LuaObjects).
 3. AlEOS AF
 
 
-3. [Lua Basics] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/LuaBasics).
-4. [Lua Functions] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/LuaFunctions).
-5. [Lua Tables] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/LuaTables).
-6. [Lua Modules] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/LuaModules).
-7. [Lua Objects] (https://github.com/SierraWireless/ALEOSAF-training/tree/master/Labs/LuaObjects).
-8. ...
+
 
 Feedback and Support
 -------------------------------------------------------------------------------
