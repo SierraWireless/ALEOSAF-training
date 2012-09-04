@@ -1,22 +1,41 @@
+-- ============================================================================
+-- Labs Lua Module.
+-- ============================================================================
+
+-- ----------------------------------------------------------------------------
+-- Includes section
+-- ----------------------------------------------------------------------------
 local sched = require 'sched'
 
--- Step.1
--- Require the module string of the execution environment and assign it to a local var
+-- ----------------------------------------------------------------------------
+-- TODO Step.1: Require string module.
+-- ----------------------------------------------------------------------------
+-- 1. Require the module "string" using the keyword "require"
+-- 2. Assign the require statement to a local variable 
+-- ----------------------------------------------------------------------------
 local string = require 'string'
 
 local function main ()
 
-	-- Step.2
-	-- Use the string module to create a string using format
-	-- After print it, set the string to upper case
-	-- Press ctrl+space to have content assist
+	-- ----------------------------------------------------------------------------
+	-- TODO Step.2: Use string module
+	-- ----------------------------------------------------------------------------
+	-- 1. Use auto-completion to see functions of the string module (key shortcut: ctrl+space)
+	-- 2. Create a string using the string.format function
+	-- 3. Print the created string
+	-- 4. Swith the string to upper case, and print it again
+	-- ----------------------------------------------------------------------------
 	local example = string.format("arg1:%s, numberarg:%d", "ARG1", 1234)
 	print(example)
-	print(string.upper(example))
+	example = string.upper(example)
+	print(example)
 
-	-- Step.4
-	-- Using the given funtions create an array with all addressbook related functions
-	-- Then add/remove/find/print some entries to the address book using the function array
+	-- ----------------------------------------------------------------------------
+	-- TODO Step.4: Create an array of functions
+	-- ----------------------------------------------------------------------------
+	-- 1. Using the given funtions create an array with all addressbook related functions
+	-- 2. Then add/remove/find/print some entries to the address book using the function array
+	-- ----------------------------------------------------------------------------
 	local add = function (addressbook, lastname, firstname, company, numbers)
 		local info = {}
 		info.lastname = lastname
@@ -71,10 +90,13 @@ local function main ()
 	addressbookfunctions.add(addressbook4, "Jack", "Captain", nil, {"0447981657"})
 	addressbookfunctions.print(addressbook4)
 
-	-- Step.5
-	-- Create a new file called "addressbook.lua". Inside of it, create a new module using luadoc with all the addressbook relative functions.
-	-- The addressbook table itself, that contains entries, can be included in the module or pass as parameter to module functions
-	-- When the module is created, require it and call some function to add/remove/find and print some entries.
+	-- ----------------------------------------------------------------------------
+	-- TODO Step.5: Create a module
+	-- ----------------------------------------------------------------------------
+	-- 1. See addressbook.lua file to create a module.
+	-- 2. When the module is created, require it
+	-- 3. Call some function to add/remove/find and print some entries
+	-- ----------------------------------------------------------------------------
 	
 	-- Require our addressbook module
 	local addressbook5 = require 'addressbook'
@@ -86,6 +108,10 @@ local function main ()
 
 	os.exit()
 end
+
+-- ----------------------------------------------------------------------------
+-- bootstrap code
+-- ----------------------------------------------------------------------------
 
 sched.run(main)
 sched.loop()

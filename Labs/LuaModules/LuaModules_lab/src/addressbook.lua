@@ -10,18 +10,6 @@
 -- 3. Create an empty array called "addressbook" witch will contain addressbook data
 -- ----------------------------------------------------------------------------
 
---- ---------------------------------------------------------------------------
--- A simple addressbook module
--- This module manage an addressbook and can print it.
--- This module provide also functions to add, remove and find entries in the addressbook.
--- @module addressbook
--- ----------------------------------------------------------------------------
-
--- local table representing the module
-local M = {}
-
--- local addressbook managed by this module
-local addressbook = {}
 
 -- ----------------------------------------------------------------------------
 -- TODO Step.2: Add functions
@@ -30,13 +18,6 @@ local addressbook = {}
 -- Note that all the functions will work with the module based addressbook table
 -- ----------------------------------------------------------------------------
 
---- ---------------------------------------------------------------------------
--- @function [parent=#addressbook] add
--- @param lastname
--- @param firstname
--- @param company Can be nil
--- @param numbers
--- ----------------------------------------------------------------------------
 function M.add (lastname, firstname, company, numbers)
 	local info = {}
 	info.lastname = lastname
@@ -46,10 +27,6 @@ function M.add (lastname, firstname, company, numbers)
 	addressbook[info] = numbers
 end
 
---- ---------------------------------------------------------------------------
--- @function [parent=#addressbook] remove
--- @param lastname
--- ----------------------------------------------------------------------------
 function M.remove (lastname)
 	for info,numbers in pairs(addressbook) do
 		if (info.lastname == lastname) then
@@ -58,10 +35,6 @@ function M.remove (lastname)
 	end
 end
 
---- ---------------------------------------------------------------------------
--- @function [parent=#addressbook] find
--- @param lastname
--- ----------------------------------------------------------------------------
 function M.find (lastname)
 	for info,numbers in pairs(addressbook) do
 		if (info.lastname == lastname) then
@@ -71,9 +44,6 @@ function M.find (lastname)
 	return nil, "Nobody found for the name:".. lastname
 end
 
---- ---------------------------------------------------------------------------
--- @function [parent=#addressbook] print
--- ----------------------------------------------------------------------------
 function M.print ()
 	print ("addressbook:")
 	for info,numbers in pairs(addressbook) do
